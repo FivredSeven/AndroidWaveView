@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44.5dp">
+        <ImageView
+            android:id="@+id/local_audio_item_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:src="@mipmap/music_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/local_audio_item_filename"
+            android:layout_toRightOf="@+id/local_audio_item_icon"
+            android:layout_toLeftOf="@+id/local_audio_item_duration"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:text="原创-纸短情长.mp3"
+            android:textSize="12dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/skin_primary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/local_audio_item_duration"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="21dp"
+            android:text="03:25"
+            android:textSize="10dp"
+            android:textColor="@color/skin_secondary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/skin_line"/>
+</LinearLayout>

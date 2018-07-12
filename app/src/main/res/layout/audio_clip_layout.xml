@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/animator_category"
+    android:layout_width="match_parent"
+    android:layout_height="155dp">
+    <RelativeLayout
+        android:id="@+id/waveform_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/editAbsoluteLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="113dp"
+            android:background="@color/transparent">
+
+            <com.suo.waveform.WaveformView
+                android:id="@+id/waveform"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffff"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/drag_markers"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/editAbsoluteLayout">
+
+        </RelativeLayout>
+
+        <com.suo.waveform.MarkerView
+            android:id="@+id/startmarker"
+            android:paddingBottom="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/drag_markers">
+
+            <ImageView
+                android:id="@+id/startmarker_stroke"
+                android:layout_width="14dp"
+                android:layout_height="7dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/marker"
+                android:gravity="center|left"
+                android:nextFocusDown="@+id/endmarker"/>
+
+            <View
+                android:id="@+id/stroke_start_line"
+                android:layout_width="1.5dip"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/startmarker_stroke"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-3dip"
+                android:layout_marginLeft="25dip"
+                android:background="@color/skin_common_widget"/>
+
+            <TextView
+                android:id="@+id/mTextView_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/startmarker_stroke"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dip"
+                android:background="@mipmap/music_make_time_tips"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:text="00:14"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:visibility="invisible"/>
+        </com.suo.waveform.MarkerView>
+
+        <com.suo.waveform.MarkerView
+            android:id="@+id/endmarker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="35dp"
+            android:layout_alignBottom="@+id/drag_markers"
+            android:layout_marginLeft="80dip">
+
+            <ImageView
+                android:id="@+id/endmarker_stroke"
+                android:layout_width="14dp"
+                android:layout_height="7dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/marker"
+                android:gravity="center|right"
+                android:nextFocusDown="@+id/info"
+                android:nextFocusUp="@+id/startmarker"/>
+
+            <View
+                android:id="@+id/stroke_end_line"
+                android:layout_width="1.5dip"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/endmarker_stroke"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-3dip"
+                android:background="@color/skin_common_widget"/>
+
+            <TextView
+                android:id="@+id/mTextView_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/endmarker_stroke"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dip"
+                android:background="@mipmap/music_make_time_tips"
+                android:singleLine="true"
+                android:text="00:14"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:visibility="invisible"/>
+        </com.suo.waveform.MarkerView>
+
+        <TextView
+            android:id="@+id/csv_start_time"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/editAbsoluteLayout"
+            android:textSize="11dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/skin_secondary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"/>
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignLeft="@+id/startmarker"
+            android:layout_below="@+id/editAbsoluteLayout"
+            android:id="@+id/csv_select_time"
+            android:textSize="12dp"
+            android:textColor="@color/skin_secondary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已选取16秒"/>
+
+        <TextView
+            android:id="@+id/csv_end_time"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editAbsoluteLayout"
+            android:textSize="11dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/skin_secondary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sad"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/skin_line"
+        android:visibility="invisible"/>
+
+</LinearLayout>

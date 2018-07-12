@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="grid_line">#ffffffff</color>
+    <color name="waveform_selected">#80888888</color>
+    <color name="waveform_unselected">#80888888</color>
+    <color name="waveform_unselected_bkgnd_overlay">#ffffffff</color>
+    <color name="t">#ffffffff</color>
+    <color name="title">#31f818</color>
+    <color name="timecode">#ddffffdd</color>
+    <color name="timecode_shadow">#aa000000</color>
+    <color name="waveform_border_line">#4223d7d1</color>
+    <color name="waveform_bg_line">#c7c7c7</color>
+
+    <color name="skin_primary_text" >#000000</color>
+    <color name="skin_secondary_text" >#FF888888</color>
+    <color name="transparent">#00000000</color>
+    <color name="skin_line" >#FFE6E6E6</color>
+    <color name="skin_common_widget" >#23D7D1</color>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/skin_primary_text"
+        android:textSize="14dp"
+        android:text="请为歌曲剪辑试听部分"/>
+
+    <TextView
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/text_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/skin_secondary_text"
+        android:layout_marginTop="12dp"
+        android:textSize="12dp"
+        android:text="00:09 原创-阳光彩虹小白马.mp3"/>
+
+    <include
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        layout="@layout/audio_clip_layout"/>
+    
+    <com.suo.waveform.widget.PressedImageView
+        android:id="@+id/play_pause_music"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/music_play"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="52dp"
+        android:layout_height="52dp" />
+
+    <RelativeLayout
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.suo.waveform.widget.PressedButton
+            android:gravity="center"
+            android:id="@+id/submit"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="58dp"
+            android:layout_marginLeft="67dp"
+            android:layout_marginRight="67dp"
+            android:text="裁剪"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/shape_next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"/>
+
+        <TextView
+            android:text="裁剪后的音频文件路径是："
+            android:layout_above="@+id/path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/path"
+            android:text="/storage/emulated/0/Android/data/com.suo.waveform/files/audio/clip/"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
